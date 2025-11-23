@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="256" height="256" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="128" cy="128" r="124" fill="#f0f4f8" stroke="#2563eb" stroke-width="8"/>
+  
+  <!-- Dollar sign -->
+  <path d="M128 60 V196" stroke="#2563eb" stroke-width="12" stroke-linecap="round"/>
+  
+  <!-- S curve for the dollar sign -->
+  <path d="M96 90 C96 78, 110 68, 128 68 C146 68, 160 78, 160 90 C160 120, 96 120, 96 166 C96 178, 110 188, 128 188 C146 188, 160 178, 160 166" 
+        fill="none" stroke="#2563eb" stroke-width="12" stroke-linecap="round"/>
+  
+  <!-- Growth arrow -->
+  <path d="M64 160 L100 120 L128 140 L172 100" fill="none" stroke="#10b981" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M154 100 L172 100 L172 118" fill="none" stroke="#10b981" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

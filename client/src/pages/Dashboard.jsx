@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { useTheme } from '../context/ThemeContext';
 import { LogOut, Moon, Sun, TrendingUp, TrendingDown, DollarSign } from 'lucide-react';
+import financeLogoPath from '/finance-logo.svg';
 import DashboardCharts from '../components/DashboardCharts';
 import { Link } from 'react-router-dom';
 import api from '../services/api';
@@ -33,9 +34,12 @@ const Dashboard = () => {
     <div className="container" style={{ padding: '2rem 1rem' }}>
       <header style={{ marginBottom: '2rem' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '1rem' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1rem' }}>
+            <img src={financeLogoPath} alt="FinTrack Logo" style={{ width: '40px', height: '40px' }} />
+          </div>
           <div>
             <h1 style={{ fontSize: '1.875rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>
-              Welcome back, {user?.username}!
+              FinTrack: Welcome back, {user?.username}!
             </h1>
             <p style={{ color: 'var(--text-secondary)' }}>Here's your financial overview.</p>
           </div>

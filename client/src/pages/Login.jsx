@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import financeLogoPath from '/finance-logo.svg';
 import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 
@@ -14,7 +15,8 @@ const Login = () => {
         try {
             await login(email, password);
             navigate('/');
-        } catch (err) {
+        } catch (error) {
+            console.error('Login error:', error);
             setError('Failed to login. Please check your credentials.');
         }
     };
@@ -22,7 +24,10 @@ const Login = () => {
     return (
         <div className="container" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <div className="card" style={{ width: '100%', maxWidth: '400px' }}>
-                <h2 style={{ textAlign: 'center', marginBottom: '1.5rem', fontSize: '1.5rem', fontWeight: 'bold' }}>Welcome Back</h2>
+                <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '1rem' }}>
+                    <img src={financeLogoPath} alt="FinTrack Logo" style={{ width: '80px', height: '80px' }} />
+                </div>
+                <h2 style={{ textAlign: 'center', marginBottom: '1.5rem', fontSize: '1.5rem', fontWeight: 'bold' }}>Welcome to FinTrack</h2>
 
                 {error && (
                     <div style={{ backgroundColor: 'rgba(239, 68, 68, 0.1)', color: 'var(--danger)', padding: '0.75rem', borderRadius: 'var(--radius)', marginBottom: '1rem', fontSize: '0.875rem' }}>
